@@ -1,0 +1,110 @@
+﻿<Window x:Class="ratata.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ratata"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1000"
+        Background="WhiteSmoke"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Name="Siatka">
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="#aa89e0"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="BorderThickness" Value="0 0 4 4"/>
+                <Setter Property="BorderBrush" Value="#71467a"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="InfoBlock" Text="" Grid.Row="13" FontSize="13" VerticalAlignment="Top" Grid.ColumnSpan="10"/>
+        <Button Click="RuchClick" Tag="1" Grid.ColumnSpan="2" Grid.Column="15" Grid.Row="14" >
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+                <TextBlock.LayoutTransform >
+                    <RotateTransform Angle="-45" />
+                </TextBlock.LayoutTransform >
+            </TextBlock>
+        </Button>
+        <Button Click="RuchClick" Tag="2" Grid.ColumnSpan="2" Grid.Column="16" Grid.Row="15">
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+            </TextBlock>
+        </Button>
+        <Button Click="RuchClick" Tag="3" Grid.ColumnSpan="2" Grid.Column="15" Grid.Row="16" >
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+                <TextBlock.LayoutTransform >
+                    <RotateTransform Angle="45" />
+                </TextBlock.LayoutTransform >
+            </TextBlock>
+        </Button>
+        <Button Click="RuchClick" Tag="4" Grid.ColumnSpan="2" Grid.Column="13" Grid.Row="16" >
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+                <TextBlock.LayoutTransform >
+                    <RotateTransform Angle="135" />
+                </TextBlock.LayoutTransform >
+            </TextBlock>
+        </Button>
+        <Button Click="RuchClick" Tag="5" Grid.ColumnSpan="2" Grid.Column="12" Grid.Row="15" >
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+                <TextBlock.LayoutTransform >
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform >
+            </TextBlock>
+        </Button>
+        <Button Click="RuchClick" Tag="6" Grid.ColumnSpan="2" Grid.Column="13" Grid.Row="14" >
+            <TextBlock Text="▶" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">
+                <TextBlock.LayoutTransform >
+                    <RotateTransform Angle="-135" />
+                </TextBlock.LayoutTransform >
+            </TextBlock>
+        </Button>
+    </Grid>
+</Window>
