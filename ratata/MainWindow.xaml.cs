@@ -121,10 +121,10 @@ namespace ratata
             string tag = b.Tag.ToString();
             int row = int.Parse(tag.Split('_')[0]);
             int col = int.Parse(tag.Split('_')[1]);
-            if (!kolej || row == ratRow || col == ratCol)
+            InfoBlock.Text = string.Format($"TAG: {tag} ROW: {row} COLUMN: {col} ratRow: {ratRow} ratCol: {ratCol}");
+            if (!kolej || row == ratRow && col == ratCol)
                 return;
             mapa[row, col] = 0;
-            InfoBlock.Text = string.Format($"TAG: {tag} ROW: {row} COLUMN: {col}");
             b.IsEnabled = false;
 
             kolej = false;
