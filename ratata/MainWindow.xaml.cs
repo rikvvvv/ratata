@@ -116,13 +116,13 @@ namespace ratata
 
         void PrzyciskClick(object sender, RoutedEventArgs e)
         {
-            if (!kolej)
-                return;
 
             Button b = (Button)sender;
             string tag = b.Tag.ToString();
             int row = int.Parse(tag.Split('_')[0]);
             int col = int.Parse(tag.Split('_')[1]);
+            if (!kolej || row == ratRow || col == ratCol)
+                return;
             mapa[row, col] = 0;
             InfoBlock.Text = string.Format($"TAG: {tag} ROW: {row} COLUMN: {col}");
             b.IsEnabled = false;
