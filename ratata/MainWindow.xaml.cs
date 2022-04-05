@@ -37,6 +37,7 @@ namespace ratata
             {2,2,2,2,2,2,2,2,2,2,2,2,2 }
         };
         int ratRow = 6, ratCol = 6;
+        bool kolej = true;
 
         Image szczuras = new Image();
         public MainWindow()
@@ -115,6 +116,9 @@ namespace ratata
 
         void PrzyciskClick(object sender, RoutedEventArgs e)
         {
+            if (!kolej)
+                return;
+
             Button b = (Button)sender;
             string tag = b.Tag.ToString();
             int row = int.Parse(tag.Split('_')[0]);
@@ -123,12 +127,17 @@ namespace ratata
             InfoBlock.Text = string.Format($"TAG: {tag} ROW: {row} COLUMN: {col}");
             b.IsEnabled = false;
 
+            kolej = false;
+            CzyjaKolej.Text = "Kolej Szczura";
+
             //ratRow++;
             //SzczurUpdate();
         }
 
         private void RuchClick(object sender, RoutedEventArgs e)
         {
+            if (kolej)
+                return;
             int dir = int.Parse(((Button)sender).Tag.ToString());
             int tempRow = ratRow, tempCol = ratCol;
             if(dir == 1)
@@ -200,6 +209,8 @@ namespace ratata
                 MessageBox.Show("wygral szczuras");
             }
 
+            kolej = true;
+            CzyjaKolej.Text = "Kolej Szczurołapa";
         }
 
         bool CzyWlaczone(int i, int j)
