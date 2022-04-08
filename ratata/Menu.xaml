@@ -1,0 +1,33 @@
+﻿<Window x:Class="ratata.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ratata"
+        mc:Ignorable="d"
+        Title="Menu" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="#aa89e0"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="BorderThickness" Value="0 0 4 4"/>
+                <Setter Property="BorderBrush" Value="#71467a"/>
+            </Style>
+        </Grid.Resources>
+        
+        
+        <Button Click="TwoPlayers" Grid.Row="1" Content="2 graczy" FontSize="30" FontWeight="Bold"/>
+        <Button Grid.Row="2" Content="1 gracz" FontSize="30" FontWeight="Bold"/>
+        <Button Grid.Row="3" Content="Wyjscie" FontSize="30" FontWeight="Bold"/>
+        
+
+    </Grid>
+</Window>
