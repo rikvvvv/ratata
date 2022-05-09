@@ -50,7 +50,7 @@ namespace ratata
         void LosoweWylaczonePola()
         {
             Random rng = new Random();
-            for(int i = 0; i < 13; i++)
+            for(int i = 0; i < 9; i++)
             {
                 mapa[rng.Next(2, 11), rng.Next(2, 11)] = 0;
             }
@@ -129,14 +129,33 @@ namespace ratata
 
             kolej = false;
             CzyjaKolej.Text = "Kolej Szczura";
-
+            CzyWygralSzczurolap();
             //ratRow++;
             //SzczurUpdate();
         }
 
         void CzyWygralSzczurolap()
         {
-
+            if(ratRow%2 == 0)
+            {
+                if (mapa[ratRow + 1, ratCol] == 0 && mapa[ratRow + 1, ratCol + 1] == 0 && mapa[ratRow, ratCol - 1] == 0 && mapa[ratRow, ratCol + 1] == 0 && mapa[ratRow - 1, ratCol] == 0 && mapa[ratRow - 1, ratCol + 1] == 0)
+                {
+                    MessageBox.Show("Wygral szczurolap");
+                    this.Close();
+                    Menu menuobj = new Menu();
+                    menuobj.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                if (mapa[ratRow + 1, ratCol] == 0 && mapa[ratRow + 1, ratCol - 1] == 0 && mapa[ratRow, ratCol - 1] == 0 && mapa[ratRow, ratCol + 1] == 0 && mapa[ratRow - 1, ratCol] == 0 && mapa[ratRow - 1, ratCol - 1] == 0)
+                {
+                    MessageBox.Show("Wygral szczurolap");
+                    this.Close();
+                    Menu menuobj = new Menu();
+                    menuobj.Visibility = Visibility.Visible;
+                }
+            }
         }
         private void RuchClick(object sender, RoutedEventArgs e)
         {
@@ -211,6 +230,9 @@ namespace ratata
             if(mapa[ratRow,ratCol] == 2)
             {
                 MessageBox.Show("wygral szczuras");
+                this.Close();
+                Menu menuobj = new Menu();
+                menuobj.Visibility = Visibility.Visible;
             }
 
             kolej = true;

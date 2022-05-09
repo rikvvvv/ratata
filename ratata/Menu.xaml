@@ -30,8 +30,9 @@
                 </Style.Resources>
             </Style>
         </Grid.Resources>
-        
-        
+
+
+        <Image Source="/images/siemaszczur.png"/>
         <Button Click="TwoPlayers" Grid.Row="1" Content="2 graczy" FontSize="30" FontWeight="Bold"/>
         <Button Click="OnePlayer" Grid.Row="2" Content="1 gracz" FontSize="30" FontWeight="Bold"/>
         <Button Click="Exit" Grid.Row="3" Content="Wyjscie" FontSize="30" FontWeight="Bold"/>

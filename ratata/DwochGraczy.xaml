@@ -113,6 +113,6 @@
             </TextBlock>
         </Button>
 
-        <TextBlock x:Name="CzyjaKolej" Text="Kolej Szczurołapa" Grid.Row="14" Grid.ColumnSpan="10" FontSize="40" FontWeight="Bold"/>
+        <TextBlock x:Name="CzyjaKolej" Text="Kolej Szczurołapa" Grid.Row="14" Grid.ColumnSpan="10" FontSize="40" FontWeight="Bold" Visibility="Hidden"/>
     </Grid>
 </Window>

@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <None Remove="images\ser.png" />
+    <None Remove="images\siemaszczur.png" />
     <None Remove="images\szczur.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\ser.png" />
+    <Resource Include="images\siemaszczur.png" />
     <Resource Include="images\szczur.png" />
   </ItemGroup>
 
