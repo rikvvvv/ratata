@@ -6,13 +6,19 @@
         xmlns:local="clr-namespace:ratata"
         mc:Ignorable="d"
         Title="JedenGracz" Height="800" Width="1000">
-    <Grid>
+    <Grid x:Name="Siatka">
         <Grid.Resources>
             <Style TargetType="Button">
                 <Setter Property="Background" Value="#aa89e0"/>
                 <Setter Property="Margin" Value="2"/>
-                <Setter Property="BorderThickness" Value="0 0 4 4"/>
+                <Setter Property="BorderThickness" Value="0 0 4 6"/>
                 <Setter Property="BorderBrush" Value="#71467a"/>
+
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Style.Resources>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -30,6 +36,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -60,5 +67,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <TextBlock x:Name="InfoBlock" Grid.Row="14" Grid.ColumnSpan="20"/>
     </Grid>
 </Window>

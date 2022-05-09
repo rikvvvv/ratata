@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ratata"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="300">
+        Title="Menu" Height="450" Width="300"
+        WindowStartupLocation="CenterScreen"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -18,15 +20,21 @@
             <Style TargetType="Button">
                 <Setter Property="Background" Value="#aa89e0"/>
                 <Setter Property="Margin" Value="10"/>
-                <Setter Property="BorderThickness" Value="0 0 4 4"/>
+                <Setter Property="BorderThickness" Value="0 0 4 6"/>
                 <Setter Property="BorderBrush" Value="#71467a"/>
+
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Style.Resources>
             </Style>
         </Grid.Resources>
         
         
         <Button Click="TwoPlayers" Grid.Row="1" Content="2 graczy" FontSize="30" FontWeight="Bold"/>
-        <Button Grid.Row="2" Content="1 gracz" FontSize="30" FontWeight="Bold"/>
-        <Button Grid.Row="3" Content="Wyjscie" FontSize="30" FontWeight="Bold"/>
+        <Button Click="OnePlayer" Grid.Row="2" Content="1 gracz" FontSize="30" FontWeight="Bold"/>
+        <Button Click="Exit" Grid.Row="3" Content="Wyjscie" FontSize="30" FontWeight="Bold"/>
         
 
     </Grid>

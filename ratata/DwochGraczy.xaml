@@ -14,8 +14,14 @@
             <Style TargetType="Button">
                 <Setter Property="Background" Value="#aa89e0"/>
                 <Setter Property="Margin" Value="2"/>
-                <Setter Property="BorderThickness" Value="0 0 4 4"/>
+                <Setter Property="BorderThickness" Value="0 0 4 6"/>
                 <Setter Property="BorderBrush" Value="#71467a"/>
+
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Style.Resources>
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>

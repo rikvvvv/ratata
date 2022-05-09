@@ -28,5 +28,17 @@ namespace ratata
             this.Visibility = Visibility.Hidden;
             objDwochGraczy.Show();
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        private void OnePlayer(object sender, RoutedEventArgs e)
+        {
+            JedenGracz objJedenGracz = new JedenGracz();
+            this.Visibility = Visibility.Hidden;
+            objJedenGracz.Show();
+        }
     }
 }

@@ -134,6 +134,10 @@ namespace ratata
             //SzczurUpdate();
         }
 
+        void CzyWygralSzczurolap()
+        {
+
+        }
         private void RuchClick(object sender, RoutedEventArgs e)
         {
             if (kolej)
